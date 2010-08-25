@@ -133,23 +133,27 @@ public void shellsort(){
 
     }
 
-public void ShellsortV2()
-{
-   int intervalo, tamArreglo;
-   Metodos metodoInsercion= new Metodos();
-   intervalo=A.length;
-   while(intervalo>1)
-   {
-       intervalo=intervalo/2;
-       tamArreglo=A.length/intervalo;
-       int aux2[]=new int[tamArreglo];
-       for(int subgrupos=0; subgrupos<(A.length/tamArreglo);subgrupos++)
-       {
-           for(int j=0;j< tamArreglo;j++)
-           {
+ public void ShellsortV2(){
+
+         System.out.println("Metodo de ShellShort con inserción");
+         int intervalo,tamArreglo;
+        Metodos metodoInsercion =new Metodos();
+                intervalo = A.length;
+
+
+         while(intervalo>1){
+             intervalo= intervalo/2;
+             tamArreglo = A.length/intervalo;
+             int aux2[]= new int[tamArreglo];
+            for(int subgrupos=0;subgrupos <(A.length/tamArreglo);subgrupos++){
+                for(int j=0;j<tamArreglo;j++)
+                    aux2[j]=A[subgrupos + (j*intervalo)];
+                metodoInsercion.setA(aux2);
+                metodoInsercion.insercion();
+                for(int j=0; j < tamArreglo; j++)
+                    A[subgrupos + (j*intervalo)] = aux2[j];
+             }
            }
-       }
-   }
-}
+     }
 
 }
