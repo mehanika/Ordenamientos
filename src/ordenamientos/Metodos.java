@@ -4,6 +4,7 @@
  */
 
 package ordenamientos;
+import java.util.ArrayList;
 import java.util.Random;
 /**
  *
@@ -156,4 +157,40 @@ public void shellsort(){
            }
      }
 
+ public void QuickSort()
+ {
+     int TOP,INI,FIN,POS;
+     ArrayList PILAMENOR = new ArrayList();
+     ArrayList PILAMAYOR= new ArrayList();
+     TOP=1;
+     PILAMENOR.add(TOP,1);
+     PILAMAYOR.add(TOP,A.length);
+     while(TOP>0)
+         INI=(Integer)(PILAMENOR.get(TOP));
+         FIN=(Integer)(PILAMENOR.get(TOP));
+         TOP--;
+
+ }
+public void PosicionaQuickSort(int INI,int FIN,int POS)
+{
+    int IZQ,DER,AUX = 0;
+    boolean BAND;
+
+    IZQ = INI; DER = FIN; POS = INI; BAND = true;
+    while(BAND==true)
+    {
+        while((A[POS] <= A[DER]) && (POS != DER))
+        {
+            DER--;
+            if(POS==DER)
+                BAND=true;
+            else
+                AUX = A[POS]; A[POS] = A[DER]; A[DER] = AUX; POS = DER;
+        }
+    }
+
+    
 }
+
+}
+
