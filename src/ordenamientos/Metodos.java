@@ -68,7 +68,7 @@ public class Metodos {
     Random rnd = new Random();
     for(int i=0;i<A.length;i++)
     {
-    int n=rnd.nextInt(5000);
+    int n=rnd.nextInt(50);
     
     A[i]=n;
     }
@@ -159,37 +159,67 @@ public void shellsort(){
 
  public void QuickSort()
  {
-     int TOP,INI,FIN,POS;
+     int TOP,INI = 0,FIN,POS = 0;
+     
      ArrayList PILAMENOR = new ArrayList();
      ArrayList PILAMAYOR= new ArrayList();
      TOP=1;
-     PILAMENOR.add(TOP,1);
-     PILAMAYOR.add(TOP,A.length);
-     while(TOP>0)
-         INI=(Integer)(PILAMENOR.get(TOP));
-         FIN=(Integer)(PILAMENOR.get(TOP));
+     PILAMENOR.add(0);
+     PILAMAYOR.add(A.length-1);
+     
+     while(TOP>0){
+         INI=(Integer)(PILAMENOR.get(PILAMENOR.size()-1));
+         FIN=(Integer)(PILAMAYOR.get(PILAMAYOR.size()-1));
          TOP--;
-
+         System.out.println("Pila mayor "+PILAMENOR+"menor "+PILAMAYOR);
+         POS=PosicionaQuickSort(INI,FIN,POS);
+         //System.out.println(POS);
+         if(INI<POS-1){
+             TOP++;
+            PILAMENOR.add(INI);
+            PILAMAYOR.add(POS-1);
+         }
+         if(FIN>POS+1)
+         {
+             TOP++;
+            PILAMENOR.add(POS+1);
+            PILAMAYOR.add(FIN);
+         }
+     }
  }
-public void PosicionaQuickSort(int INI,int FIN,int POS)
+public int PosicionaQuickSort(int INI,int FIN,int POS)
 {
     int IZQ,DER,AUX = 0;
     boolean BAND;
 
     IZQ = INI; DER = FIN; POS = INI; BAND = true;
     while(BAND==true)
-    {
+    {   //Empieza comparando el primer elemento de la izquierda con el elemento final hasta que el de la izq sea mayor que el de la derecha
         while((A[POS] <= A[DER]) && (POS != DER))
         {
             DER--;
-            if(POS==DER)
-                BAND=true;
-            else
-                AUX = A[POS]; A[POS] = A[DER]; A[DER] = AUX; POS = DER;
         }
-    }
+            if(POS==DER)
+            {BAND=false;}
+            else{
+            ///Se cambia de lugar A[POS] con A[DER] Y POS se convierte en DER
+                AUX = A[POS]; A[POS] = A[DER]; A[DER] = AUX; POS = DER;
+                //POS empieza en INI al igual que IZQ
+                while(A[POS]>=A[IZQ] && (POS!=IZQ))
+                {
+                    IZQ++;
+                }
+                if(POS==IZQ)
+                {BAND=false;}
+                else{AUX = A[POS]; A[POS] = A[IZQ]; A[IZQ] = AUX; POS = IZQ;}
 
-    
+            }
+        
+    }
+    System.out.println("Arreglo semi ordenado");
+   this.imprimir();
+    return POS;
+   
 }
 
 }
