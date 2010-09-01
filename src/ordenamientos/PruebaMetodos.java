@@ -20,9 +20,9 @@ public class PruebaMetodos {
 
         Metodos metodos=new Metodos();
 
-        int arreglo[]={3,5,7,9,4,6,1,10,2};
-        metodos.setA(arreglo);
-        //metodos.generarAleatorios();
+        //int arreglo[]={3,5,7,9,4,6,1,10,2};
+        //metodos.setA(arreglo);
+        metodos.generarAleatorios();
         //System.out.println("Metodo de insercion");
         System.out.println("Arreglo desordenado");
         metodos.imprimir();
