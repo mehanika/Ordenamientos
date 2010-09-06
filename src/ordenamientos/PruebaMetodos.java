@@ -20,7 +20,7 @@ public class PruebaMetodos {
 
         Metodos metodos=new Metodos();
 
-        //int arreglo[]={3,5,7,9,4,6,1,10,2};
+        //int arreglo[]={15,67,8,16,44,27,12,35,56,21,13,28,60,36,7,10};
         //metodos.setA(arreglo);
         metodos.generarAleatorios();
         //System.out.println("Metodo de insercion");

@@ -171,20 +171,25 @@ public void shellsort(){
          INI=(Integer)(PILAMENOR.get(PILAMENOR.size()-1));
          FIN=(Integer)(PILAMAYOR.get(PILAMAYOR.size()-1));
          TOP--;
-         System.out.println("Pila mayor "+PILAMENOR+"menor "+PILAMAYOR);
          POS=PosicionaQuickSort(INI,FIN,POS);
+
+         PILAMAYOR.remove(PILAMENOR.size()-1);
+      PILAMENOR.remove(PILAMENOR.size()-1);
          //System.out.println(POS);
          if(INI<POS-1){
              TOP++;
             PILAMENOR.add(INI);
             PILAMAYOR.add(POS-1);
+            
          }
          if(FIN>POS+1)
          {
              TOP++;
             PILAMENOR.add(POS+1);
             PILAMAYOR.add(FIN);
+            
          }
+      
      }
  }
 public int PosicionaQuickSort(int INI,int FIN,int POS)
@@ -216,8 +221,7 @@ public int PosicionaQuickSort(int INI,int FIN,int POS)
             }
         
     }
-    System.out.println("Arreglo semi ordenado");
-   this.imprimir();
+   
     return POS;
    
 }
