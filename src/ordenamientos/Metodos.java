@@ -4,6 +4,7 @@
  */
 
 package ordenamientos;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 /**
@@ -224,6 +225,23 @@ public int PosicionaQuickSort(int INI,int FIN,int POS)
    
     return POS;
    
+}
+
+public void GeneraAleatoriosADIsco() throws IOException{
+         Random rnd = new Random();
+        int x;
+        FileWriter fw = new FileWriter("F.txt");
+        BufferedWriter bw = new BufferedWriter(fw);
+        PrintWriter pw = new PrintWriter(bw);
+
+
+        for(int i=0;i < 200; i++){
+            x = (int) (rnd.nextDouble()*10000);
+            pw.println(x);
+       }
+     pw.close();
+
+
 }
 
 }
