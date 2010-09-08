@@ -5,7 +5,10 @@
 
 package ordenamientos;
 
+import java.io.IOException;
 import java.util.Stack;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -19,7 +22,7 @@ public class PruebaMetodos {
     public static void main(String[] args) {
 
         Metodos metodos=new Metodos();
-
+        /**
         //int arreglo[]={15,67,8,16,44,27,12,35,56,21,13,28,60,36,7,10};
         //metodos.setA(arreglo);
         metodos.generarAleatorios();
@@ -27,10 +30,15 @@ public class PruebaMetodos {
         System.out.println("Arreglo desordenado");
         metodos.imprimir();
         //metodos.insercion();
-        metodos.QuickSort();
+        metodos.QuickSort();***/
+        try {
+            metodos.GeneraAleatoriosADIsco();
+        } catch (IOException ex) {
+            Logger.getLogger(PruebaMetodos.class.getName()).log(Level.SEVERE, null, ex);
+        }
        
         System.out.println("Arreglo ordenado");
-        metodos.imprimir();
+        //metodos.imprimir();
         
         // TODO code application logic here
     }
