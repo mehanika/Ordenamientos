@@ -51,7 +51,7 @@ public class Metodos {
          comp++;
      }
 
-     while((k>=0) && (aux<A[k]))
+     while((k>=0) && (A[k]>aux))
      {
           comp++;
          cambio++;

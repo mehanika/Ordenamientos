@@ -22,23 +22,25 @@ public class PruebaMetodos {
     public static void main(String[] args) {
 
         Metodos metodos=new Metodos();
-        /**
-        //int arreglo[]={15,67,8,16,44,27,12,35,56,21,13,28,60,36,7,10};
-        //metodos.setA(arreglo);
-        metodos.generarAleatorios();
+        
+       int arreglo[]={15,67,8,16,44,27,12,35,56,21,13,28,60,36,7,10};
+
+        metodos.setA(arreglo);
+        //metodos.insercion();
+        /**metodos.generarAleatorios();
         //System.out.println("Metodo de insercion");
         System.out.println("Arreglo desordenado");
         metodos.imprimir();
         //metodos.insercion();
         metodos.QuickSort();***/
-        try {
+      /*  try {
             metodos.GeneraAleatoriosADIsco();
         } catch (IOException ex) {
             Logger.getLogger(PruebaMetodos.class.getName()).log(Level.SEVERE, null, ex);
         }
        
         System.out.println("Arreglo ordenado");
-        //metodos.imprimir();
+        //metodos.imprimir();*/
         
         // TODO code application logic here
     }

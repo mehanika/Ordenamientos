@@ -204,6 +204,8 @@ public class MezclaDirecta {
             pw.println(R2);
             inLine2=br2.readLine();
         }
+       br1.close();
+       br2.close();
         pw.close();
   }
 
