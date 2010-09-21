@@ -58,16 +58,19 @@ public class MezclaDirecta {
 
       String inLine="";
 
-      while(inLine !=null){
+      while(inLine !=null)
+      {
           k=0;
-          while(k < part){
+          while(k < part)
+          {
               inLine = br.readLine();
               if(inLine != null){
                   pw.println(inLine);}
               k++;
           }
           l=0;
-          while( l < part){
+          while( l < part)
+          {
               inLine = br.readLine();
               if(inLine != null){
                   pw1.println(inLine);}
@@ -189,6 +192,7 @@ public class MezclaDirecta {
        if(B2==false)
            pw.println(R2);
        //PASO 14
+      inLine=br1.readLine();
        while(inLine!=null)
        {
            
@@ -197,6 +201,7 @@ public class MezclaDirecta {
             inLine=br1.readLine();
        }
        //16
+      inLine2=br2.readLine();
        while(inLine2!=null)
        {
            
