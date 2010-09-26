@@ -42,7 +42,7 @@ inLineF3 = br3.readLine();
 br1.close();
 br3.close();
 
-} while (inLineF1 != null || inLineF3 != null);
+} while (inLineF1!= null && inLineF3!= null);
 
 
 }
@@ -162,7 +162,7 @@ R1=Integer.parseInt(inLineA);}
     {
         if(R1>=aux)
         {
-            aux=this.ayuda1(aux, R1, pwc, pwd, b);
+            if(inLineA!=null){aux=this.ayuda1(aux, R1, pwc, pwd, b);}
             dele1=true;
             //8.5.1.1
         }else if(R2>=aux)
@@ -180,7 +180,7 @@ R1=Integer.parseInt(inLineA);}
     {//8.5.3
         if(R2>=aux)
         {
-         aux=this.ayuda1(aux, R2, pwc, pwd, b);
+         if(inLineB!=null){aux=this.ayuda1(aux, R2, pwc, pwd, b);}
          dele2=true;
         }else if(R1>=aux)
         {
@@ -269,7 +269,7 @@ String inLine="";
      }else
      {
          aux=ayuda2(aux, R, pwc, pwd, b);
-         //b=cambio(b);
+         b=cambio(b);
      }
     }
 }
