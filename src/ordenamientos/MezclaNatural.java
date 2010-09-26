@@ -158,6 +158,7 @@ R1=Integer.parseInt(inLineA);}
         dele2=false;
     }
     //8.5
+    if(inLineA!=null){
     if(R1<R2)
     {
         if(R1>=aux)
@@ -194,7 +195,22 @@ R1=Integer.parseInt(inLineA);}
          
          dele2=true;
         }
+
     }
+}else if(inLineB!=null)
+    {
+    if(R2>=aux)
+        {
+         aux=this.ayuda1(aux, R2, pwc, pwd, b);
+         dele2=true;
+        }else{
+        aux=ayuda2(aux, R2, pwc, pwd, b);
+         b=cambio(b);
+         dele2=true;
+        }
+
+    
+}else{break;}
 }
 //10
 if(dele1==true && inLineA==null)
