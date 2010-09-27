@@ -167,7 +167,7 @@ R1=Integer.parseInt(inLineA);}
             //8.5.1.1
         }else if(R2>=aux)
         {
-            aux=this.ayuda1(aux, R2, pwc, pwd, b);
+           if(inLineB!=null){aux=this.ayuda1(aux, R2, pwc, pwd, b);}
             dele2=true;
         }else
         {
@@ -184,7 +184,7 @@ R1=Integer.parseInt(inLineA);}
          dele2=true;
         }else if(R1>=aux)
         {
-            aux=this.ayuda1(aux, R1, pwc, pwd, b);
+            if(inLineA!=null){aux=this.ayuda1(aux, R1, pwc, pwd, b);}
             dele1=true;
         }
         else
